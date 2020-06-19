@@ -3,8 +3,8 @@ This is where I store anything that I was proud enough of to submit to [Rosetta 
 
 I currently have about 50 solutions on my PC, but I have not submitted most of them to the site. Typically, this is for one of the following reasons:
 1. The task mostly tested something other than skill with the language in question. For example, lots of tasks are made much easier if you know some good tricks for factoring integers or if you're familiar with regular expressions.
-2. My solution was as good as identical to the existing one. This is usually the case for tasks that can be solved in only a few lines.
-3. The existing solution was far better than mine.
+2. My solution was as good as identical to the other solutions. This is usually the case for tasks that can be solved in only a few lines.
+3. The existing solutions were far better than mine.
 4. I wasn't interested enough in the problem to turn my first solution in to a good solution.
 5. My solution solved almost all of the problem, but needed a full rewrite to really solve it.
 6. The task itself encouraged bad code or code that looks like bad code. This is particularly common for tasks that want you to do something that your language is terrible at.
