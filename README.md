@@ -8,3 +8,5 @@ I currently have about 50 solutions on my PC, but I have not submitted most of t
 4. I wasn't interested enough in the problem to turn my first solution in to a good solution.
 5. My solution solved almost all of the problem, but needed a full rewrite to really solve it.
 6. The task itself encouraged bad code or code that looks like bad code. This is particularly common for tasks that want you to do something that your language is terrible at.
+
+Where possible, I have included some context explaining why I submitted my solution and how it differs from the site's existing solutions.
