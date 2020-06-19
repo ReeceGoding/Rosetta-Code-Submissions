@@ -1,7 +1,9 @@
 #https://rosettacode.org/wiki/Left_factorials
+#Context: The site's other solution used many loops. I considered this unidiomatic.
 
-#These sorts of problems are R's bread and butter. The only challenge comes from making sure that R plays
-#nice with objects from the gmp library.
+##Vectorization solution
+#Due to vectorization, these sorts of problems are R's bread and butter.
+#The only challenge comes from making sure that R plays nice with objects from the gmp library.
 library(gmp)
 leftFactorial<-function(n)
 {

@@ -1,5 +1,7 @@
 #https://rosettacode.org/wiki/Proper_divisors
+#Context: The site's other solution uses a package for an easy problem. I considered this unidiomatic.
 
+##Filter solution
 #Task 1
 #Has no input error checking.
 properDivisors<-function(n)

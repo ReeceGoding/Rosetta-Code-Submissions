@@ -1,12 +1,11 @@
 #https://rosettacode.org/wiki/Cumulative_standard_deviation
-#The task is debated on the talk page, so I gave three solutions.
+#Context: The task's requirements are debated on the talk page, so I gave three solutions.
 
 ##Solution 1: ""Running" SD"
 #If we desire a solution that gives every "running" standard deviation for each input,
 #rather than only giving one number as our final output, we can do the following.
 #To make this differ from previous solutions, we will not have our code make any mention
 #of missing values, and we will show off R's Reduce and sapply.
-
 biasedSd<-function(data)#Once again, we have to make a standard deviation function from scratch.
 {
   sqrt(mean((data-mean(data))^2))

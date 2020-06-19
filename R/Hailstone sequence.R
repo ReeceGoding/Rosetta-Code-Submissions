@@ -1,5 +1,10 @@
 #https://rosettacode.org/wiki/Hailstone_sequence
+#Context: I thought that my solution was more idiomatic than the site's existing solution.
 
+##Vectorization solution
+#The previous solution is entirely satisfactory and may be more efficient than the following solution.
+#However, problems like these are a great chance to show off the strength of R's vectorization.
+#Observe how short the following code is: 
 ###Task 1:
 collatz<-function(n)
 {

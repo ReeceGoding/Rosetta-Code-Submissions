@@ -1,4 +1,5 @@
 #https://rosettacode.org/wiki/Guess_the_number/With_feedback
+#Context: This solution replaced the site's previous solution.
 
 #The previous solution lacked the required checks for if the input was appropriate,
 #was bugged if low==high (R's sample function works differently if the input is of length 1),

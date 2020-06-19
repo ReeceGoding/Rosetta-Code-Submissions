@@ -1,5 +1,7 @@
 #https://rosettacode.org/wiki/Barnsley_fern
+#Context: The site's other solution uses linear algebra.
 
+##'Obvious' solution
 #The matrix solution above is a clever approach, but the following solution is more readable
 #if you're unfamiliar with linear algebra. This is very much a blind "just do what the task says"
 #solution. It's so simple that it probably runs unadapted in S. I suspect that there is room for
@@ -43,4 +45,4 @@ fernOfNPoints<-function(n)
 fernOfNPoints(500000)
 #It will look better if you use a bigger input, but the plot might take a while.
 #I find that there's a large delay between RStudio saying that my code is finished running and the plot appearing.
-##If your input is truly big, you may want to reduce the two cex parameters (to make the points smaller).
+#If your input is truly big, you may want to reduce the two cex parameters (to make the points smaller).
