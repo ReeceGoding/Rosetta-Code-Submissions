@@ -20,5 +20,6 @@ leftFactorialVecInput(0:10)
 #Task 2
 leftFactorialVecInput(seq(20,110,by=10))
 #Task 3
-#nchar isn't very well-behaved on big numbers so it needs help from as.character 
+#nchar isn't very well-behaved on big numbers so it needs help from as.character.
+#If we really wanted to take care with nchar misbehaving, we could have used format.
 sapply(leftFactorialVecInput(seq(1000,10000,by=1000)),function(x) nchar(as.character(x)))
