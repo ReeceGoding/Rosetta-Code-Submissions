@@ -1,3 +1,4 @@
+#https://rosettacode.org/wiki/Palindrome_detection
 #Context: I had a smart full solution, but it had a bug that stopped it from solving an extra-credit part.
 #I submitted this partial solution because none of the other solutions used "rev", despite it being perfect for this.
 #In fact, none of the current R solutions appear to be full ones. Even in other languages, full solutions are rare.
