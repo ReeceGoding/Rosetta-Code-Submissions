@@ -6,8 +6,8 @@
 #Has no input error checking.
 properDivisors<-function(n)
 {
-  if(n==1)(NULL)#This seems like bad code, but task 2 demands some output for n=1, which has no proper divisors.
-  else(Filter(function(x) n %% x == 0, 1:(n%/%2)))
+  #Returning NULL seems like bad code, but task 2 demands some output for n=1, which has no proper divisors.
+  if(n==1) NULL else Filter(function(x) n %% x == 0, 1:(n%/%2))
 }
 
 #Task 2
