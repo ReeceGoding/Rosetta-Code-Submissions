@@ -2,7 +2,7 @@
 #Context: Below. This replaced the previous solution.
 
 #The previously solution missed out on a cool R trick for swapping items and had no check for lists of length 1.
-#As R is 1-indexed, we've aimed to be as faithful as we can to the given pseudo-code.
+#As R is 1-indexed, we have aimed to be as faithful as we can to the given pseudo-code.
 bubbleSort<-function(items)
 {
   repeat
