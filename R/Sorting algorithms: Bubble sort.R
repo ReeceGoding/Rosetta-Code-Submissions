@@ -22,7 +22,6 @@ bubbleSort<-function(items)
   }
   items
 }
-
 #Examples taken from the Haxe solution.
 ints<-c(1,10,2,5,-1,5,-19,4,23,0)
 numerics<-c(1,-3.2,5.2,10.8,-5.7,7.3,3.5,0,-4.1,-9.5)
