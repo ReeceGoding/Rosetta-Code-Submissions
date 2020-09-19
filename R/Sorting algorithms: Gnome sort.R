@@ -27,7 +27,7 @@ gnomeSort<-function(a)
       }
     }
   }
-a
+  a
 }
 #Examples taken from the Haxe solution.
 #Note that R can use <= to compare strings.
