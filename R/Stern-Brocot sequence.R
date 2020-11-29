@@ -1,0 +1,29 @@
+#https://rosettacode.org/wiki/Stern-Brocot_sequence
+#Context: Below.
+
+#Tasks like this are R's bread and butter. The previous solution uses smart mathematical tricks to generate the
+#desired sequence with a for loop and uses a similarly clever for loop for the task involving gcds.
+#However, R is smart enough to let us avoid this work by writing some much more idiomatic code.
+
+#As with the previous solution, we have used a library for our gcd function. In this case, we have used gmp.
+genNStern<-function(n)
+{
+  sternNums<-c(1L,1L)
+  i<-2
+  while((endIndex<-length(sternNums))<n)
+  {
+    #To show off R's vectorization, the following line is deliberately terse.
+    #It assigns sternNums[i-1]+sternNums[i] to sternNums[endIndex+1]
+    #and it assigns sternNums[i], the "considered" number, to sternNums[endIndex+2], now the end of the sequence.
+    #Note that we do not have to initialize a big sternNums array to do this.
+    #True to the algorithm, the new entries are appended to the end of the old sequence.
+    sternNums[endIndex+c(1,2)]<-c(sum(sternNums[c(i-1,i)]),sternNums[i])
+    i<-i+1
+  }
+  sternNums[1:n]
+}
+#N=5000 was picked arbitrarily. The code runs very fast regardless of this number being much more than we need. 
+firstFiveThousandTerms<-genNStern(5000)
+match(1:10, firstFiveThousandTerms)
+match(100, firstFiveThousandTerms)
+all(sapply(1:999, function(i) gmp::gcd(firstFiveThousandTerms[i],firstFiveThousandTerms[i+1]))==1)
