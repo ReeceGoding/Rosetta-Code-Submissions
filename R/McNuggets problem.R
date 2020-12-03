@@ -13,5 +13,5 @@ all(mcNuggets==mcNuggets2)
 #sorted, unique, and no greater than 100.
 results<-setdiff(0:100,mcNuggets)
 cat("The non-McNuggets numbers that are no greater than 100 are:",results,"\nThe largest is",max(results),"\n")
-#Ultimately, this can be done in one line
+#Ultimately, this can be done in one line:
 max(setdiff(0:100,rowSums(expand.grid(seq(0,100,6),seq(0,100,9),seq(0,100,20)))))
