@@ -3,7 +3,7 @@
 
 #The previous solution lacked the required checks for if the input was appropriate,
 #was bugged if low==high (R's sample function works differently if the input is of length 1),
-#and behaved very strangly if low or high weren't whole numbers.
+#and behaved very strangely if low or high weren't whole numbers.
 
 #This solution works on the assumption that the number to be found must be an integer
 #and also assumes that the upper and lower bounds are distinct integers.
