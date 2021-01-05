@@ -1,5 +1,6 @@
 #https://rosettacode.org/wiki/Guess_the_number/With_feedback_(player)
-#Context: There was no solution before mine. Sadly, every good idea that I had was also found in the Python solution.
+#Context: There was no solution before mine.
+#Inspecting the other solutions reveals that every good idea that I had was also found in the Python solution.
 
 #Can be fooled if you lie to it. For example, always reporting "h" for guessANumberPlayer(1,5) will have it guess 0.
 guessANumberPlayer<-function(low,high)
