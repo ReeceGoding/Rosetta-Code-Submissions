@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Sattolo_cycle
-#Context: Below. There was no solution before mine.
+#Context: Below. There was no solution in R before mine.
 
 #Basically identical to https://rosettacode.org/wiki/Knuth_shuffle#Short_version
 #We've only changed an i to an i-1, changed the function names, and added the [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22] test.

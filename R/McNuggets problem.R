@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/McNuggets_problem
-#Context: There was no solution before mine.
+#Context: There was no solution in R before mine.
 
 #Assuming that the natural numbers start at 0.
 #There are two natural approaches. The first is to generate all valid x, y, and z and then apply the function:

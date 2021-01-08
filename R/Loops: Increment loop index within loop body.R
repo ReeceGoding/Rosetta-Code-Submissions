@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Loops/Increment_loop_index_within_loop_body
-#Context: There was no solution before mine.
+#Context: There was no solution in R before mine.
 
 #R cannot complete this task with a for loop. See https://stackoverflow.com/a/5913329/10319707
 #Instead, we must go down the same path as the Kotlin solution.

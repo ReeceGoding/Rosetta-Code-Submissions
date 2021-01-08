@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/General_FizzBuzz
-#Context: Below. There was no solution before mine.
+#Context: Below. There was no solution in R before mine.
 
 ##... solution
 #The task asks that we assume 3 factors for the sake of simplicity.

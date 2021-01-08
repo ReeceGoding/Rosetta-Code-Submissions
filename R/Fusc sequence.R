@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Fusc_sequence
-#Context: There was no solution before mine.
+#Context: There was no solution in R before mine.
 
 #I believe that this code demonstrates a great truth of R: It is amazing with numbers, but terrible with strings.
 #There is really no good reason why checking how long a number is and printing it nicely should be hardest parts of this task.

@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Loops/Wrong_ranges
-#Context: There was no solution before mine.
+#Context: There was no solution in R before mine.
 #The commenting is made slightly hard to read as it had to be formatted for Rosetta Code to show that I was talking about seq's parameters.
 
 #Aside from the second case, this behaviour is explained by two sentences of seq's documentation:
