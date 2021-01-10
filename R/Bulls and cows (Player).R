@@ -1,0 +1,33 @@
+#https://rosettacode.org/wiki/Bulls_and_cows/Player
+#Context: Below. There was no solution in R before mine.
+
+#As we are picking our guesses randomly from the remaining valid guesses, it is likely that this solution is neither optimal, efficient, or particularly smart.
+#However, it is much shorter than some of the other solutions, is reasonably idiomatic R, and does not break in any way that I know of.
+#I am aware that there exists an optimal method of playing this game, but I neither know the algorithm nor was required by the task to implement it.
+#For comparison, it would be interesting to see the optimal method submitted here as an alternative solution.
+bullsAndCowsPlayer<-function()
+{
+  guesses<-1234:9876
+  #The next line is terrible code, but it's the most R way to convert a set of 4-digit numbers to their 4 digits.
+  guessDigits<-t(sapply(strsplit(as.character(guesses),""),as.integer))
+  validGuesses<-guessDigits[apply(guessDigits,1,function(x) length(unique(x))==4 && all(x!=0)),]
+  repeat
+  {
+    remainingCasesCount<-length(validGuesses[,1])
+    cat("Possibilities remaining:",remainingCasesCount)#Not required, but excellent when debugging.
+    guess<-validGuesses[sample(remainingCasesCount,1),]
+    guessAsOneNumber<-as.integer(paste(guess,collapse=""))
+    bulls<-as.integer(readline(paste0("My guess is ",guessAsOneNumber,". Bull score? [0-4] ")))
+    if(bulls==4){return(paste0("Your number is ",guessAsOneNumber,". I win!"))}
+    cows<-as.integer(readline("Cow score? [0-4] "))
+    pseudoBulls<-function(x){sum(x==guess)}
+    #If our guess scores y bulls, then only numbers containing exactly y digits with the same value and position (y "pseudoBulls") as in our guess can be correct.
+    #Accounting for the positions of cows not being fixed, the same argument also applies for them.
+    #The next line makes us only keep the numbers that have the right pseudoBulls and "pseudoCows" scores, albeit without the need for a pseudoCows function.
+    #We also use pseudoBulls!=4 to remove our most recent guess, because we know that it cannot be correct.
+    #Finally, the drop=FALSE flag is needed to stop R converting validGuesses to a vector when there is only one guess left.
+    validGuesses<-validGuesses[apply(validGuesses,1,function(x) pseudoBulls(x)==bulls&&sum(x %in% guess)-pseudoBulls(x)==cows&&pseudoBulls(x)!=4),,drop=FALSE]
+    if(length(validGuesses)==0){return("Error: Scoring problem?")}
+  }
+}
+bullsAndCowsPlayer()
