@@ -22,7 +22,7 @@ a^2
     else if(n>1){mat%*%(mat%^%(n-1))}
     else stop("Invalid n.")
   }
-  else stop("Invald input type.")
+  else stop("Invalid input type.")
 }
 #For output:
 a%^%0
