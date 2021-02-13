@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Bin_given_limits
-#Context: Below. There was no solution in R before mine. In fact, there was hardly any solutions at all.
+#Context: Below. There was no solution in R before mine. In fact, there were hardly any solutions at all.
 
 #This is R's bread and butter. Even with only the base library, the only thing
 #stopping us from giving a one-line solution is the task's requirement of using two functions.
