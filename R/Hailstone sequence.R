@@ -4,17 +4,22 @@
 ##Vectorization solution
 #The previous solution is entirely satisfactory and may be more efficient than the following solution.
 #However, problems like these are a great chance to show off the strength of R's vectorization.
+#Also, this lets us show off how the <- syntax can do multiple variable assignments in one line.
 #Observe how short the following code is: 
 ###Task 1:
 collatz<-function(n)
 {
-  output<-c(n)
-  lastEntry<-output[1]
+  lastIndex<-1
+  output<-lastEntry<-n
   while(lastEntry!=1)
   {
-    if(lastEntry%%2==0){output<-c(output,lastEntry%/%2)}
-    else{output<-c(output,3*lastEntry+1)}
-    lastEntry<-output[length(output)]
+    #Each branch updates lastEntry, lastIndex, and appends a new element to the end of output.
+    #Note that the return value of lastIndex<-lastIndex+1 is lastIndex+1.
+    #You may be surprised that output can be appended to despite starting as just a single number.
+    #If so, recall that R's numerics are vectors, meaning that output<-n created a vector of length 1.
+    #It's ugly, but efficient.
+    if(lastEntry%%2==0){lastEntry<-output[lastIndex<-lastIndex+1]<-lastEntry%/%2}
+    else{lastEntry<-output[lastIndex<-lastIndex+1]<-3*lastEntry+1}
   }
   output
 }
