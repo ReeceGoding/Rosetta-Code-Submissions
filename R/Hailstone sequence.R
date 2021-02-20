@@ -34,4 +34,5 @@ cat("The first four elements are:", twentySeven[1:4],"and the last four are:", t
 seqLenghts<-sapply(1:99999,function(x) length(collatz(x)))
 longest<-which.max(seqLenghts)
 print(paste0("The longest sequence before the 100000th is found at n=",longest,". It has length ",seqLenghts[longest],"."))
-#Equivalently, line 1 could have been: seqLenghts<-sapply(Vectorize(collatz)(1:99999),length)
+#Equivalently, line 1 could have been: seqLenghts<-sapply(Vectorize(collatz)(1:99999),length).
+#Another good option would be seqLenghts<-lengths(Vectorize(collatz)(1:99999)).
