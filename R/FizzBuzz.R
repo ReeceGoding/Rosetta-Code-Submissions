@@ -5,7 +5,7 @@
 #As with the other examples in the R section, I did not wrap my solutions in functions.
 
 #Or, adapting from https://rosettacode.org/wiki/General_FizzBuzz#Names_solution :
-namedNums<-c(3,5); names(namedNums)<-c("Fizz","Buzz")
+namedNums<-c(Fizz=3,Buzz=5)
 for(i in 1:100)
 {
   isFactor<-i %% namedNums == 0

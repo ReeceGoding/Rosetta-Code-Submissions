@@ -27,7 +27,7 @@ genFizzBuzz(105,c(5,"Buzz"),c(9,"Prax"),c(3,"Fizz"),c(7,"Baxx"))
 
 ##Names solution
 #If we deviate from the task's example of how to input parameters and
-#instead use R's names function to make our (number, name) pairs, we get a much cleaner solution.
+#instead use R's names facilities to make our (number, name) pairs, we get a much cleaner solution.
 namedGenFizzBuzz<-function(n,namedNums)
 {
   factors<-sort(namedNums)#Required by the task: We must go from least factor to greatest.
@@ -38,7 +38,7 @@ namedGenFizzBuzz<-function(n,namedNums)
   }
   invisible()
 }
-namedNums<-c(3,5,7); names(namedNums)<-c("Fizz","Buzz","Baxx")
+namedNums<-c(Fizz=3,Buzz=5,Baxx=7)#Notice that we can name our inputs without a call to names
 namedGenFizzBuzz(105,namedNums)
-shuffledNamedNums<-c(5,9,3,7); names(shuffledNamedNums)<-c("Buzz","Prax","Fizz","Baxx")
+shuffledNamedNums<-c(Buzz=5,Prax=9,Fizz=3,Baxx=7)
 namedGenFizzBuzz(105,shuffledNamedNums)
