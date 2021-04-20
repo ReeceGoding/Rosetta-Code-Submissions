@@ -21,7 +21,7 @@ print(first61)
 #If we only want the first such number, then the task is trivial. As we have already seen it in the n=60 output, we don't even have to be smart.
 #Indeed, if we were being smart, we'd say that the answer was trivial: 0 at index 1.
 #A proper solution that only gives one non-trivial result is as follows:
-index<-which(nchar(first61)==2)[1]
+index<-which.max(nchar(first61)==2)
 number<-first61[index]
 cat("The first fusc number that is longer than all previous fusc numbers is",number,
     "and it occurs at index",index)
@@ -30,7 +30,7 @@ cat("The first fusc number that is longer than all previous fusc numbers is",num
 #One nice solution is to use format, which also allows us to add the required commas:
 twentyMillion<-firstNPlus1FuscNumbers(2*10^7-1)
 twentyMillionCountable<-format(twentyMillion,scientific = FALSE,trim = TRUE)
-indices<-sapply(2:6, function(x) (which(nchar(twentyMillionCountable)==x))[1])
+indices<-sapply(2:6, function(x) which.max(nchar(twentyMillionCountable)==x))
 numbers<-twentyMillion[indices]
 cat("Some fusc numbers that are longer than all previous fusc numbers are:\n",
     paste0(format(twentyMillion[indices],scientific = FALSE,trim = TRUE,big.mark = ","),
