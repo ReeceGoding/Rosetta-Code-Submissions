@@ -12,9 +12,10 @@ print(quote(5^3))
 
 #As for actually solving the task, the requirement that each output be on a new
 #line causes us a surprising amount of difficulty.
-#We cannot pass a new line character to print(), but cat(), which does accept them,
-#does not accept quoted inputs.
-#To avoid repeating ourselves, we end up having to do some frankly ridiculous metaprogramming.
+#To avoid repeating ourselves, we must almost resort to metaprogramming:
 inputs<-alist(5^3^2, (5^3)^2, 5^(3^2), 5**3**2, (5**3)**2, 5**(3**2))
-printer<-function(i) print(paste(inputs[i], "returns: ", eval(inputs[[i]])))
-invisible(sapply(seq_along(inputs), printer))
+invisible(sapply(inputs, function(x) cat(deparse(x), "returns: ", eval(x), "\n")))
+
+#Alternatively, we could print out a matrix or data frame:
+print(matrix(sapply(inputs, eval), dimnames = list(inputs, "Outputs")))
+print(data.frame(Inputs=sapply(inputs, deparse), Outputs=sapply(inputs, eval)))
