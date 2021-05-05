@@ -10,6 +10,15 @@
 print(quote(5**3))
 print(quote(5^3))
 
+#Another method is to use "^" as if it is an ordinary function of two arguments.
+#It appears that "**" does not support this.
+#As there is no potential for ambiguity in the operator precedence, we will not
+#print this result below. For example:
+'^'('^'(5, 3), 2)
+#is clearly (5^3)^2 i.e. 15625, whereas
+'^'(5, '^'(3, 2))
+#is clearly 5^(3^2) i.e. 1953125.
+
 #As for actually solving the task, the requirement that each output be on a new
 #line causes us a surprising amount of difficulty.
 #To avoid repeating ourselves, we must almost resort to metaprogramming:
