@@ -1,5 +1,6 @@
 #https://rosettacode.org/wiki/Exponentiation_with_infix_operators_in_(or_operating_on)_the_base
-#Context: None needed. The only oddity here is using many lines to call the data.frame function.
+#Context: There was no solution in R before mine.
+#The only oddity here is using many lines to call the data.frame function.
 #This was done because it is by far the most complicated part of this simple code.
 
 expressions <- alist(-x ^ p, -(x) ^ p, (-x) ^ p, -(x ^ p))

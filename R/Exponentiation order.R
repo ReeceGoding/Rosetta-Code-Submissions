@@ -1,5 +1,6 @@
 #https://rosettacode.org/wiki/Exponentiation_order
-#Context: Below. I wish that I had just done it the lazy way.
+#Context: Below. There was no solution in R before mine.
+#I wish that I had just done it the lazy way.
 
 #The 'Operator Syntax and Precedence' documentation tells us that
 #"^" is "exponentiation (right to left)". The 'Arithmetic Operators' documentation also
