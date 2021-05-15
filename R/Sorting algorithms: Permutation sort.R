@@ -15,3 +15,10 @@ permuSort<-function(list)
 test<-sample(10)
 print(test)
 permuSort(test)
+
+#An alternative solution would be to replace the while loop with the following:
+##repeat
+##{
+##  if(!is.unsorted(iter$nextIter())) break
+##}
+#This seems more explicit than the empty while loop, but also more complex.
