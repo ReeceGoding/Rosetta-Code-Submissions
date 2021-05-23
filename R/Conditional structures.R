@@ -1,3 +1,6 @@
+#https://rosettacode.org/wiki/Conditional_structures
+#Context: Below. There was no solution in R before mine.
+
 ##if
 #Like most languages, R has an if statement as well as if-then-else:
 x<-0
