@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Metaprogramming
-#Context: There was no solution in R before mine.
+#Context: Below. There was no solution in R before mine.
 
 #R does not have much to offer in this regard.
 #It has generic functions, but they're little more than the forbidden option of operator overloading.
