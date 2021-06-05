@@ -7,11 +7,11 @@
 library(gmp)
 leftFact <- function(numbs)
 {
-  #As we will never actually use the numeric values of our outputs,
-  #we will immediately coerce them to characters. For technical
-  #reasons to do with nchar misbehaving, this also makes task 3
-  #much easier.
-  sapply(numbs, function(n) as.character(if(n==0) 0 else sum(factorialZ(0:(n-1)))))
+  #As we will never actually use the numeric values of our outputs, we will
+  #immediately coerce them to characters. For technical reasons to do with
+  #nchar misbehaving, this also makes task 3 much easier.
+  #As task 1 will demonstrate, the n=0 special case is covered.
+  sapply(numbs, function(n) as.character(sum(factorialZ(seq_len(n)-1))))
 }
 printer <- function(inputs) print(data.frame(Value = leftFact(inputs), row.names = paste0("!", inputs)))
 
