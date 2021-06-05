@@ -5,21 +5,20 @@
 #Due to vectorization, these sorts of problems are R's bread and butter.
 #The only challenge comes from making sure that R plays nice with objects from the gmp library.
 library(gmp)
-leftFactorial<-function(n)
+leftFact <- function(numbs)
 {
-  if(n==0){0}
-  else{sum(factorialZ(0:(n-1)))}
+  #As we will never actually use the numeric values of our outputs,
+  #we will immediately coerce them to characters. For technical
+  #reasons to do with nchar misbehaving, this also makes task 3
+  #much easier.
+  sapply(numbs, function(n) as.character(if(n==0) 0 else sum(factorialZ(0:(n-1)))))
 }
-leftFactorialVecInput<-function(vector)
-{
-  Vectorize(leftFactorial,SIMPLIFY=FALSE)(vector)
-}
+printer <- function(inputs) print(data.frame(Value = leftFact(inputs), row.names = paste0("!", inputs)))
 
 #Task 1
-leftFactorialVecInput(0:10)
+printer(0:10)
 #Task 2
-leftFactorialVecInput(seq(20,110,by=10))
+printer(seq(20, 110, by = 10))
 #Task 3
-#nchar isn't very well-behaved on big numbers so it needs help from as.character.
-#If we really wanted to take care with nchar misbehaving, we could have used format.
-sapply(leftFactorialVecInput(seq(1000,10000,by=1000)),function(x) nchar(as.character(x)))
+inputs<-seq(1000, 10000, by = 1000)
+print(data.frame(Digits = sapply(leftFact(inputs), nchar), row.names = paste0("!", inputs)))
