@@ -3,6 +3,7 @@
 
 #Global variables aren't idiomatic R, but this is otherwise an ideal task for the language.
 #Comments aside, this is easily one of the shortest solutions on this page.
+#This is mostly due to how R treats most things as a vector.
 #For example, rValues starts out as the number 1, but repeatedly has new values
 #appended to it without much ceremony.
 rValues <- 1
