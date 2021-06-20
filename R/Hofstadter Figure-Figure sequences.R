@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Hofstadter_Figure-Figure_sequences
-#Context: Below.
+#Context: Below. There was no solution in R before mine.
 
 #Global variables aren't idiomatic R, but this is otherwise an ideal task for the language.
 #Comments aside, this is easily one of the shortest solutions on this page.
