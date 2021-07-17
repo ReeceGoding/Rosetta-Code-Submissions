@@ -1,3 +1,6 @@
+#https://rosettacode.org/wiki/Combinations_and_permutations
+#Context: Below. There was no solution in R before mine.
+
 #R has most of this built in. The documentation for choose warns that it
 #only calculates its result directly if k is small.
 #Skimming what appears to be the source code
