@@ -8,9 +8,8 @@ library(combinat)
 perm <- function(A)
 {
   stopifnot(is.matrix(A))
-  dimensions <- dim(A)
-  n <- dimensions[1]
-  if(any(dimensions != n)) stop("Matrix is not square.")
+  n <- nrow(A)
+  if(n != ncol(A)) stop("Matrix is not square.")
   if(n < 1) stop("Matrix has a dimension of size 0.")
   sum(sapply(combinat::permn(n), function(sigma) prod(sapply(1:n, function(i) A[i, sigma[i]]))))
 }
