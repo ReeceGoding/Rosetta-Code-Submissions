@@ -1,7 +1,7 @@
 #https://rosettacode.org/wiki/Loops/Increment_loop_index_within_loop_body
 #Context: There was no solution in R before mine.
 
-#R cannot complete this task with a for loop. See https://stackoverflow.com/a/5913329/10319707
+#R cannot complete this task with a for loop. See https://stackoverflow.com/a/5913329/
 #Instead, we must go down the same path as the Kotlin solution.
 #Because it is sufficient for numbers this small, we will save ourselves some work and use the gmp library's
 #isprime function for checking if a number is prime.

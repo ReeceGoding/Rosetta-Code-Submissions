@@ -10,7 +10,7 @@
 #*It lacks any concept of a linked list, meaning that we can't take a circular list approach.
 #*The idiomatic way to roll an array in R (e.g. as the Ruby solution has) is to exploit the head and tail functions,
 #but those break if we are rolling by more than the length of the array
-#(see https://stackoverflow.com/q/18791212/10319707 for a few tricks for this).
+#(see https://stackoverflow.com/q/18791212/ for a few tricks for this).
 #Regardless, it is still solvable. The following adapts a great deal of the Lua solution.
 #The arguments n, k, and m are as in the task description.
 josephusProblem<-function(n,k,m)
