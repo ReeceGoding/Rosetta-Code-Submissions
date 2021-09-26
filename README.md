@@ -9,4 +9,4 @@ I currently have about 100 solutions on my PC, but I have not submitted many of 
 5. My solution solved almost all of the problem, but needed a full rewrite to really solve it.
 6. The task itself encouraged bad code or code that looks like bad code. This is particularly common for tasks that want you to do something that your language is terrible at.
 
-Where possible, I have included some context explaining why I submitted my solution and how it differs from the site's existing solutions. The explanations tend to vary based on whether or not there was already a submitted solution in R.
+Where possible, I have included some context explaining why I submitted my solution and how it differs from the site's existing solutions. The explanations tend to vary based on whether or not there was already a submitted solution in R. Generally speaking, if I fully solve a task which had no previous solution in R, then I include it here regardless of many of the above concerns.
