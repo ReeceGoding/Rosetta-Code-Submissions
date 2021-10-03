@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/Rock-paper-scissors
-#Context: There was no solution in R before mine.
+#Context: Below. There was no solution in R before mine.
 
 #This milks R's vectorisation quite heavily.
 #However, this approach doesn't generalise well to the extra credit task.

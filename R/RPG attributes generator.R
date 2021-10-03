@@ -1,5 +1,5 @@
 #https://rosettacode.org/wiki/RPG_attributes_generator
-#Context: There was no solution in R before mine.
+#Context: Below. There was no solution in R before mine.
 
 #The base library already has an attributes function, so we avoid using that name.
 #Otherwise, this is R's bread and butter.
