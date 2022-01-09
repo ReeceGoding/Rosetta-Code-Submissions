@@ -6,38 +6,38 @@
 #if you're unfamiliar with linear algebra. This is very much a blind "just do what the task says"
 #solution. It's so simple that it probably runs unadapted in S. I suspect that there is room for
 #an interesting use of R's ifelse function somewhere, but I couldn't find a clean way.
-fernOfNPoints<-function(n)
+fernOfNPoints <- function(n)
 {
-  currentX<-currentY<-newX<-newY<-0
-  plot(0,0,xlim=c(-2,3),ylim=c(0,10),xlab="",ylab="",pch=20,col="darkgreen",cex=0.1)
-  f1<-function()#ran 1% of the time
+  currentX <- currentY <- newX <- newY <- 0
+  plot(0, 0, xlim = c(-2, 3), ylim = c(0, 10), xlab = "", ylab = "", pch = 20, col = "darkgreen", cex = 0.1)
+  f1 <- function()#ran 1% of the time
   {
-    newX<<-0
-    newY<<-0.16*currentY
+    newX <<- 0
+    newY <<- 0.16 * currentY
   }
-  f2<-function()#ran 85% of the time
+  f2 <- function()#ran 85% of the time
   {
-    newX<<-0.85*newX+0.04*newY
-    newY<<--0.04*newX+0.85*newY+1.6#<<-- is not an error, R's assignment is just that ugly sometimes.
+    newX <<- 0.85 * newX + 0.04 * newY
+    newY <<- -0.04 * newX + 0.85 * newY + 1.6
   }
-  f3<-function()#ran 7% of the time
+  f3 <- function()#ran 7% of the time
   {
-    newX<<-0.2*newX-0.26*newY
-    newY<<-0.23*newX+0.22*newY+1.6
+    newX <<- 0.2 * newX - 0.26 * newY
+    newY <<- 0.23 * newX + 0.22 * newY + 1.6
   }
-  f4<-function()#ran 7% of the time
+  f4 <- function()#ran 7% of the time
   {
-    newX<<--0.15*newX+0.28*newY
-    newY<<-0.26*newX+0.24*newY+0.44
+    newX <<- -0.15 * newX + 0.28 * newY
+    newY <<- 0.26 * newX + 0.24 * newY + 0.44
   }
   for(i in 2:n)#We've already plotted (0,0), so we can skip one run.
   {
-    case<-runif(1)
-    if(case<=0.01)f1()
-    else if(case<=0.86)f2()
-    else if(case<=0.93)f3()
+    case <- runif(1)
+    if(case <= 0.01) f1()
+    else if(case <= 0.86) f2()
+    else if(case <= 0.93) f3()
     else f4()
-    points(newX,newY,pch=20,col="darkgreen",cex=0.1)
+    points(newX, newY, pch = 20, col = "darkgreen", cex = 0.1)
   }
   return(invisible())
 }
