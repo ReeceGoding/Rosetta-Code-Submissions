@@ -13,27 +13,27 @@
 #(see https://stackoverflow.com/q/18791212/ for a few tricks for this).
 #Regardless, it is still solvable. The following adapts a great deal of the Lua solution.
 #The arguments n, k, and m are as in the task description.
-josephusProblem<-function(n,k,m)
+josephusProblem <- function(n, k, m)
 {
-  prisoners<-0:(n-1)
-  exPos<-countToK<-1
-  dead<-integer(0)
-  while(length(prisoners)>m)
+  prisoners <- 0:(n - 1)
+  exPos <- countToK <- 1
+  dead <- integer(0)
+  while(length(prisoners) > m)
   {
-    if(countToK==k)
+    if(countToK == k)
     {
-      dead<-c(dead,prisoners[exPos])
-      prisoners<-prisoners[-exPos]
-      exPos<-exPos-1
+      dead <- c(dead, prisoners[exPos])
+      prisoners <- prisoners[-exPos]
+      exPos <- exPos - 1
     }
-    exPos<-exPos+1
-    countToK<-countToK+1
-  if(exPos>length(prisoners)){exPos<-1}
-  if(countToK>k){countToK<-1}
+    exPos <- exPos + 1
+    countToK <- countToK + 1
+  if(exPos > length(prisoners)) exPos <- 1
+  if(countToK > k) countToK <- 1
   }
-  print(paste0("Execution order: ",paste0(dead,collapse =", "),"."))
-  paste0("Survivors: ",paste0(prisoners,collapse =", "),".")
+  print(paste0("Execution order: ", paste0(dead, collapse = ", "), "."))
+  paste0("Survivors: ", paste0(prisoners, collapse = ", "), ".")
 }
-josephusProblem(5,2,1)
-josephusProblem(41,3,1)
-josephusProblem(41,3,3)
+josephusProblem(5, 2, 1)
+josephusProblem(41, 3, 1)
+josephusProblem(41, 3, 3)
