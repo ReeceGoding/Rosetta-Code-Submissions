@@ -13,5 +13,5 @@
 #https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Defining-new-binary-operators
 #As for doing this ourselves, we will implement a version of the "nCk" syntax that some calculators
 #use for "n choose k", i.e. the binomial coefficient:
-'%C%' <- function(n, k){choose(n, k)}
-5%C%2 #Outputs 10.
+'%C%' <- function(n, k) choose(n, k)
+5 %C% 2 #Outputs 10.

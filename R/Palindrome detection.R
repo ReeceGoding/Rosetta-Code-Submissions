@@ -7,8 +7,8 @@
 #R has a built-in function for reversing vectors, so we only have to coerce our input in to the proper form.
 #Unicode is supported, but this ignores the "inexact palindromes" extra credit requirement because,
 #without some sort of regex, supporting Unicode while stripping punctuation and white space is hard in R.
-is.Palindrome<-function(string)
+is.Palindrome <- function(string)
 {
-  characters<-unlist(strsplit(string,""))
-  all(characters==rev(characters))
+  characters <- unlist(strsplit(string, ""))
+  all(characters == rev(characters))
 }
