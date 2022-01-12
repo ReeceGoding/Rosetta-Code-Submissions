@@ -21,10 +21,7 @@ data2 <- c(445,814,519,697,700,130,255,889,481,122,932,77,323,525,570,219,367,52
          605,847,353,968,832,205,838,427,876,959,686,646,835,127,621,892,443,198,988,791,
          466,23,707,467,33,670,921,180,991,396,160,436,717,918,8,374,101,684,727,749)
 
-createBin <- function(limits, data)
-{
-  sapply(0:length(limits), function(x) sum(findInterval(data, limits) == x))
-}
+createBin <- function(limits, data) sapply(0:length(limits), function(x) sum(findInterval(data, limits) == x))
 
 #Contains some unicode magic so that we can get the infinity symbol and <= to print nicely.
 #Half of the battle here is making sure that we're not being thrown by R being 1-indexed.

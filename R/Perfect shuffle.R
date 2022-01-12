@@ -8,21 +8,21 @@
 pShuffle <- function(deck)
 {
   n <- length(deck)#Assumed even (as in task description).
-  new <- array(n)#Maybe not as general as it could be, but the task said to use whatever was convenient.
-  new[seq(from = 1, to = n, by = 2)] <- deck[seq(from = 1, to = n/2, by = 1)]
-  new[seq(from = 2, to = n, by = 2)] <- deck[seq(from = 1 + n/2, to = n, by = 1)]
-  new
+  shuffled <- array(n)#Maybe not as general as it could be, but the task said to use whatever was convenient.
+  shuffled[seq(from = 1, to = n, by = 2)] <- deck[seq(from = 1, to = n/2, by = 1)]
+  shuffled[seq(from = 2, to = n, by = 2)] <- deck[seq(from = 1 + n/2, to = n, by = 1)]
+  shuffled
 }
 
 task2 <- function(deck)
 {
-  new <- deck
+  shuffled <- deck
   count <- 0
   repeat
   {
-    new <- pShuffle(new)
+    shuffled <- pShuffle(shuffled)
     count <- count + 1
-    if(all(new == deck)) break
+    if(all(shuffled == deck)) break
   }
   cat("It takes", count, "shuffles of a deck of size", length(deck), "to return to the original deck.","\n")
   invisible(count)#For the unit tests. The task wanted this printed so we only return it invisibly.
